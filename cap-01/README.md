@@ -1,9 +1,9 @@
 # ¿Como llegamos hasta aquí?
 
 Este capítulo me explico un poco de la historia de HTML y de los pioneros que empezaron con la creación de las páginas web, aprendí que existen los tipos de contenidos y que cada uno se especifica con ciertas etiquetas como por ejemplo las imágenes JPEG, al colocarse en la etiqueta 
-< img > se le coloca de preferencia al final "imagen/jpeg" para indicar que es un formato de imagen de tipo Jpeg, además explica que tu al ingresar a una página web esta envía el "header" a tu navegador para que pueda interpretar como se tiene que ver la página web, además que estas fueron introducidas en 1994 por la World Wide Web Consortium (W3C)
+`<img>` se le coloca de preferencia al final "imagen/jpeg" para indicar que es un formato de imagen de tipo Jpeg, además explica que tu al ingresar a una página web esta envía el "header" a tu navegador para que pueda interpretar como se tiene que ver la página web, además que estas fueron introducidas en 1994 por la World Wide Web Consortium (W3C)
 
-Además, que las etiquetas fueron idea de diversas personas, se nos explica cómo se creó la etiqueta "img”, que fue *Mark Anderssen* 
+Además, que las etiquetas fueron idea de diversas personas, se nos explica cómo se creó la etiqueta `<img>`, que fue *Mark Anderssen* 
 
 Fue algo tipo
 
@@ -22,12 +22,12 @@ El que introdujo el atributo "name" fue *Tony Johnson*
 
 Nos hablan de SLAC que significa *Stanford Linear Accelerator Center* los cuales fueron los primeros que hostearon el primer servidor web 
 
-Además de el atributo "name" *Tony* introdujo el atributo "HREF" donde al principio se podía referenciar (referenece en inglés, de ahí REF de HREF), de ahí también la incluye en la etiqueta "< A>"
+Además de el atributo "name" *Tony* introdujo el atributo "HREF" donde al principio se podía referenciar (referenece en inglés, de ahí REF de HREF), de ahí también la incluye en la etiqueta `<A>`
    
    
  Y continuando con eso varias personas más fueron añadiendo atributos, como *Jim Davis* que fue el que menciono de especificar el tipo de contenido dejando la etiqueta así:
  
- < img href="url" CONTENT-TYPE=audio/Basic>
+ `<img href="url" CONTENT-TYPE=audio/Basic>`
  
 Menciona que ***HTTP2***
 permite que cualquier documento que contenga cualquier tipo que el usuario haya indicado
@@ -40,7 +40,7 @@ Un dato curioso que mencionan es que la creación de Mozilla Firefox nació de o
 
 
 ##### La importancia de los Tipos de medio
-Estos importan debido a que en ocasiones los navegadores "olvidan”, Por ejemplo, si colocas las etiquetas de una manera tipo < b> < i> </ b> </ i> el navegador lo intentara resolver sin importar como lo haga.
+Estos importan debido a que en ocasiones los navegadores "olvidan”, Por ejemplo, si colocas las etiquetas de una manera tipo `<b> <i> </b> </i>` el navegador lo intentara resolver sin importar como lo haga.
 
 ##### Algo importante a resaltar es que nos dan los requerimientos más importantes:
 
