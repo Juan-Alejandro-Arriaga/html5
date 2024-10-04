@@ -31,6 +31,7 @@ En la etiqueta `<head>`
             <script src="modernizr.min.js"></script>
         </head>
     </HTML>
+    
 No hay necesidad de llamarlo , corre automáticamente, funciona de tal manera que, si al tu meter un Canva dentro de tu navegador este lo soportara , su propiedad *"Modernizr. canvas"* será ***true*** y si no es el caso será ***false***
 
     Ejemplo mostrado es este:
@@ -41,7 +42,7 @@ No hay necesidad de llamarlo , corre automáticamente, funciona de tal manera qu
              // No son aptos los canvas :(
         }
 
-### CANVAS
+## CANVAS
 A resumidas cuentas en un mapa de bits, para representar diversos elementos como gráficos o imágenes sobre la marcha, con comandos de JavaScript es posible dibujar cualquier forma que se deseara 
 
 En caso de que tu navegador lo soportara, todos los elementos `<Canva>` tendrán un método llamado getContext() y con este hará que solo exista si tu navegador soporta los "***Canvas***"
@@ -58,7 +59,7 @@ Nota:
 
     "!!" estos sirven para forzar el resultado que sea un tipo Booleano
     
-### Texto en los canvas
+## Texto en los canvas
 
 En caso de que el navegador no soporte los "Canva API" se creara un elemento para los `<canvas>` el cual solo tendrá propiedades básicas.
 
@@ -89,7 +90,8 @@ En caso de que el navegador no soporte los "Canva API" se creara un elemento par
                             |
     Y al final solo chechar si tiene la funcion señalada para ver si funciona en caso de que si , es que si funciona
     
-### VIDEO
+## VIDEO
+
 HTML5 tiene un elemento que es `<video>` 
 
 Este se puede usar sin necesidad de algun `<script>` 
@@ -99,7 +101,7 @@ Y si el navegador no lo soporta
 De igual manera que en los anteriores se puede usar Mordernizr para corroborar que el navegador soporta el elemento.
 
 
-### Formatos de video
+## Formatos de video
 Debido a que existen distintos formatos de video , el navegador debe entender 
 
 Nota:
@@ -115,13 +117,12 @@ Los formatos de video tienen una funcion de nombre
 * "*maybe*" Esta 50/50 que pueda reproducirlo
 * ""(vacio)  No lo puede reproducir
 
-
  *return v.canPlayType('video/ogg; codecs="theora, vorbis"');*
  Esta funcion lo que dice es que si puede reproducir los videos theora y vorbis en un contenedor de Ogg
  
  De igual manera se puede hacer todo esto con Modernizr para facilitar toda la escritura de codigo.
  
-### Almacenamiento Local
+## Almacenamiento Local
 Nos hablan de las "*Cookies*" que son información del usuario que se almacenan en la página web gracias a JavaScript , funciona cuando se carga la pagina 
 
 En caso de que el navegador no soporte este tipo de almacenamiento lo que se almacena será indefinido
@@ -138,8 +139,7 @@ Esta funcion generara una excepción si las "*cookies*" están deshabilitadas
     
 De igual manera se puede usar Mordernizr
 
-
-### Web Workers
+## Web Workers
  
  Estos permiten que en el fondo permita correr diferentes "***threads***" al mismo tiempo 
 
@@ -155,16 +155,14 @@ Existe la funcion ***Worker*** el cual si el navegador no soporta el **Web Worke
 
 De igual manera Modernizr se puede usar.
 
-
-
-### Aplicaciones Fuera de línea
+## Aplicaciones Fuera de línea
 
 En HTML5 se pueden crear páginas web sin necesidad de estar conectado a una red de internet
 
 Incluso pueden funcionar algunas aplicaciones ya que algunas descargan ciertas funcionalidades solo que mientras no estes conectado a alguna red de internet los cambios que hagas no se guardaran.
 
 
-### Geolocalización
+## Geolocalización
 Es la manera con la que sabes en que parte del mundo estas y para saberlo esta la dirección IP o el "***GPS***" que calcula la latitud y altitud
 
 Tiene su propiedad "***geolcation***"
@@ -177,7 +175,7 @@ En esta funcion si el navegador no soporta *geolocation API* devolverá un valor
         
 Igual se puede usar Mordernizr
 
-### Tipos de entradas
+## Tipos de entradas
 
 Generalmente se pueden usar para formularios y hay muchos tipos de estos como por ejemplo botones, cajas de texto, y muchos tipos mas
 
@@ -187,11 +185,11 @@ De igual manera se pueden crear con Js esta función es para crear el elemento
 
 Y también se le pueden añadir atributos
 
-### Placeholder Text
+## Placeholder Text
 
 Estos son textos que están dentro de las cajas de texto que se coloquen ,aparecerán siempre y cuando estos estén vacíos aparecerá el texto.
 
-### Form Autofocus
+## Form Autofocus
 
 Con Js es posible hacer que un elemento en este caso un "*input*" resalte entre los demás del texto como por ejemplo al darle clic en la barra de búsqueda de Google, esta cambia de color resaltando en el texto
 
@@ -205,9 +203,8 @@ Y si el navegador no lo soporta no se realizará la acción del "***autofocus***
 
 De igual manera se puede usar Modernizr
 
-### Micro Data
+## Micro Data
 Estos sirven para poder añadir algunas pequeñas cosas a la página web como por ejemplo señalar cosas sobre el autor o no tan extensas 
-
 
 De igual manera tienen una propiedad que es el *getText()* y si el navegador no lo soporta este será indefinido
 
@@ -217,5 +214,5 @@ De igual manera tienen una propiedad que es el *getText()* y si el navegador no 
     }
 En este caso Modernizr no soporta este tipo de formato
 
-### Historial del API
+## Historial del API
 Hace que se pueda manipular el historial de navegación mediante "***scripts***", así una *URL* puede seguir haciendo su trabajo como identificador único para el recurso actual
