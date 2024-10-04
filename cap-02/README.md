@@ -44,7 +44,7 @@ No hay necesidad de llamarlo , corre automáticamente, funciona de tal manera qu
 ### CANVAS
 A resumidas cuentas en un mapa de bits, para representar diversos elementos como gráficos o imágenes sobre la marcha, con comandos de JavaScript es posible dibujar cualquier forma que se deseara 
 
-En caso de que tu navegador lo soportara, todos los elementos `<Canva>` tendrán un método llamado getContext () y con este hará que solo exista si tu navegador soporta los *Canvas*
+En caso de que tu navegador lo soportara, todos los elementos `<Canva>` tendrán un método llamado getContext() y con este hará que solo exista si tu navegador soporta los "***Canvas***"
     
     Ejemplo: 
     (función) (Nombre de la f) 
@@ -103,7 +103,7 @@ De igual manera que en los anteriores se puede usar Mordernizr para corroborar q
 Debido a que existen distintos formatos de video , el navegador debe entender 
 
 Nota:
-Los formatos de video(lenguajes) se les nombran "codec"
+Los formatos de video(lenguajes) se les nombran "***codec***"
 
 Y cada codec cuesta dinero debido a la licencia que tienen
 
@@ -139,11 +139,11 @@ Esta funcion generara una excepción si las "*cookies*" están deshabilitadas
 De igual manera se puede usar Mordernizr
 
 
-### Trabajadores de la web
+### Web Workers
  
- Estos permiten que en el fondo permita correr diferentes "*threads*" al mismo tiempo 
+ Estos permiten que en el fondo permita correr diferentes "***threads***" al mismo tiempo 
 
-Esos permiten hacer cálculos matemáticos super complejos y algunas otras cosas mientras la página está controlada por el usuario con "*clicks* y *scrolling*"
+Esos permiten hacer cálculos matemáticos súper complejos y algunas otras cosas mientras la página está controlada por el usuario con "***clicks***" y "***scrolling***"
 
 
 Existe la funcion ***Worker*** el cual si el navegador no soporta el **Web Worker API** este será indefinido
@@ -165,11 +165,11 @@ Incluso pueden funcionar algunas aplicaciones ya que algunas descargan ciertas f
 
 
 ### Geolocalización
-Es la manera con la que sabes en que parte del mundo estas y para saberlo esta la dirección IP o el GPS que calcula la latitud y altitud
+Es la manera con la que sabes en que parte del mundo estas y para saberlo esta la dirección IP o el "***GPS***" que calcula la latitud y altitud
 
-Tiene su propiedad *geolcation*
+Tiene su propiedad "***geolcation***"
 
-En esta funcion si el navegador no soporta *geolocation API* devolvera un valor indefinido
+En esta funcion si el navegador no soporta *geolocation API* devolverá un valor indefinido
 
         function supports_geolocation() {
          return !!navigator.geolocation;
@@ -182,7 +182,7 @@ Igual se puede usar Mordernizr
 Generalmente se pueden usar para formularios y hay muchos tipos de estos como por ejemplo botones, cajas de texto, y muchos tipos mas
 
 
-De igual manera se pueden crear con Js esta funcion es para crear el elemento
+De igual manera se pueden crear con Js esta función es para crear el elemento
  var i = document.createElement("input");
 
 Y también se le pueden añadir atributos
@@ -191,17 +191,17 @@ Y también se le pueden añadir atributos
 
 Estos son textos que están dentro de las cajas de texto que se coloquen ,aparecerán siempre y cuando estos estén vacíos aparecerá el texto.
 
-### Enfoque automático del formulario
+### Form Autofocus
 
-Con Js es posible hacer que un elemento en este caso un input resalte entre los demás del texto como por ejemplo al darle clic en la barra de búsqueda de Google, esta cambia de color resaltando en el texto
+Con Js es posible hacer que un elemento en este caso un "*input*" resalte entre los demás del texto como por ejemplo al darle clic en la barra de búsqueda de Google, esta cambia de color resaltando en el texto
 
-Esta funcion coloca el foco de atención al elemento
+Esta función coloca el foco de atención al elemento
 
         function supports_input_autofocus() {
         var i = document.createElement('input');
         return 'autofocus' in i;
         }
-Y si el navegador no lo soporta no se realizará la acción del autofocus
+Y si el navegador no lo soporta no se realizará la acción del "***autofocus***"
 
 De igual manera se puede usar Modernizr
 
@@ -218,4 +218,4 @@ De igual manera tienen una propiedad que es el *getText()* y si el navegador no 
 En este caso Modernizr no soporta este tipo de formato
 
 ### Historial del API
-Hace que se pueda manipular el historial de navegación mediante scripts, así una *URL* puede seguir haciendo su trabajo como identificador único para el recurso actual
+Hace que se pueda manipular el historial de navegación mediante "***scripts***", así una *URL* puede seguir haciendo su trabajo como identificador único para el recurso actual
