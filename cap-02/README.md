@@ -1,27 +1,28 @@
 # Detectando características de HTML
-HTML5 es tan fácil que no necesita de un soporte técnico, ya que cada quien puede ser su propio soporte.
+HTML5 nos permite que cada quien pueda resolver cualquier problema que se presente con alguna característica ya sean ***Canvas*** , ***Vídeo*** , ***Geolocalización ***
 
-Dentro de Html5 existe el **DOM**, que son todos los elementos que haya dentro del documento ya sean `<p> <a> <div>`
+
+Los navegadores construyen un ***Document Object Model (DOM)*** el cual es un conjunto de objetos que tiene HTML los cuales son representados en la pagina web 
 
 Cada una tiene características únicas como ejemplo ´<img>´ que hace que puedas colocar imágenes 
 
 Nos dan 4 formas con las que podemos revisar si el navegador soporta esa propiedad:
 
-1. Comprobar si existe esa propiedad en un objeto global
-1. Crea un elemento y comprueba/investiga acerca si esa propiedad existe
-1. Crea un elemento, y revisa si el método existe en ese elemento, después llama al método y checa si regresa el valor
-1. Crea un elemento, añádele un valor, y checa si el elemento conservo el valor
+* Comprobar si existe esa propiedad en un objeto global 
+* Crea un elemento y comprueba/investiga acerca si esa propiedad existe 
+* Crea un elemento, y revisa si el método existe en ese elemento, después llama al método y checa si regresa el valor 
+* Crea un elemento, añádele un valor, y checa si el elemento conservo el valor 
     
         Ejemplo:
         los tipos de <input> que sean soportados
         
-Hablan de ***Mordernizr*** el cual es un tipo soporte para archivos HTML5 y CSS3, para hacer uso de él se tiene que colocar:
+Nos presentan ***Mordernizr*** el cual es un tipo soporte para archivos HTML5 y CSS3, para hacer uso de él se tiene que colocar:
 
 `<script src="modernizr.min.js"></script>`
 
 En la etiqueta `<head>`
 
-##### El formato sería algo semejante a esto:
+##### Implementación al código 
 
     <!DOCTYPE HTML>
     <HTML>
@@ -32,7 +33,7 @@ En la etiqueta `<head>`
         </head>
     </HTML>
     
-No hay necesidad de llamarlo , corre automáticamente, funciona de tal manera que, si al tu meter un Canva dentro de tu navegador este lo soportara , su propiedad *"Modernizr. canvas"* será ***true*** y si no es el caso será ***false***
+Este se ejecuta automáticamente sin tener la necesidad de llamarlo o iniciarlo, este crea un objeto que se llama "***Modernizr***" el cual trae consigo propiedades de tipo "*Boolean*" para cada característica que este incluida dentro de "*Modernizr*"
 
     Ejemplo mostrado es este:
     
@@ -42,6 +43,7 @@ No hay necesidad de llamarlo , corre automáticamente, funciona de tal manera qu
              // No son aptos los canvas :(
         }
 
+Con este se puede detectar si los "*Canvas*" son soportados por el navegador, en caso de que los soporte , la propiedad "*Modernizr*" dará **True** y en cambio si no lo soporta dará **False**
 ## CANVAS
 A resumidas cuentas en un mapa de bits, para representar diversos elementos como gráficos o imágenes sobre la marcha, con comandos de JavaScript es posible dibujar cualquier forma que se deseara 
 
@@ -92,35 +94,26 @@ En caso de que el navegador no soporte los "Canva API" se creara un elemento par
     
 ## VIDEO
 
-HTML5 tiene un elemento que es `<video>` 
+El elemento `<video>` nos permite reproducir formatos de vídeo dentro de nuestro sitio web , con este se puede especificar distintos formatos de vídeo y el navegador elegirá con cual lo mostrara.
 
-Este se puede usar sin necesidad de algun `<script>` 
+En caso de que el navegador no soporte el formato de vídeo este solamente lo ignorara , existen soluciones para eso como la de "*Video For Everyone*" creado por Kroc Carmen.
 
-Y si el navegador no lo soporta 
+En esta característica se puede usar "*Modernizr*"
 
-De igual manera que en los anteriores se puede usar Mordernizr para corroborar que el navegador soporta el elemento.
+## Formatos de vídeo
+Los formatos de vídeo se pueden entender como una variedad de lenguajes ya que existe una gran variedad, y a estos se les llama "***Codec***".
 
+Debido a su vasta existencia los navegadores no definen como tal el uso de solamente un "*Codec*" ,actualmente hay 2 establecidos el primer "*Codec*" cuesta dinero ,y el segundo es gratuito
 
-## Formatos de video
-Debido a que existen distintos formatos de video , el navegador debe entender 
-
-Nota:
-Los formatos de video(lenguajes) se les nombran "***codec***"
-
-Y cada codec cuesta dinero debido a la licencia que tienen
-
-
-Los formatos de video tienen una funcion de nombre 
-**.canPlayType()** la cual regresa un valor tipo cadena dependiendo si puede o no reproducir el video
+Los formatos de vídeo tienen una función de nombre 
+**.canPlayType()** la cual regresa un valor tipo cadena dependiendo si puede o no reproducir el vídeo
 
 * "*probably*" Puede reproducirlo
 * "*maybe*" Esta 50/50 que pueda reproducirlo
-* ""(vacio)  No lo puede reproducir
+* ""(vacío)  No lo puede reproducir
 
- *return v.canPlayType('video/ogg; codecs="theora, vorbis"');*
- Esta funcion lo que dice es que si puede reproducir los videos theora y vorbis en un contenedor de Ogg
- 
- De igual manera se puede hacer todo esto con Modernizr para facilitar toda la escritura de codigo.
+
+En este caso se puede usar "*Modernizr*" para facilitar la detección de los formatos de vídeo en HTML5
  
 ## Almacenamiento Local
 Nos hablan de las "*Cookies*" que son información del usuario que se almacenan en la página web gracias a JavaScript , funciona cuando se carga la pagina 
@@ -153,7 +146,7 @@ Existe la funcion ***Worker*** el cual si el navegador no soporta el **Web Worke
             return !!window.Worker;
        }
 
-De igual manera Modernizr se puede usar.
+De igual manera "*Modernizr*" se puede usar.
 
 ## Aplicaciones Fuera de línea
 
@@ -163,7 +156,7 @@ Incluso pueden funcionar algunas aplicaciones ya que algunas descargan ciertas f
 
 
 ## Geolocalización
-Es la manera con la que sabes en que parte del mundo estas y para saberlo esta la dirección IP o el "***GPS***" que calcula la latitud y altitud
+Es la manera con la que sabes en que parte del mundo estas y para saberlo esta la dirección IP o el "***GPS***" que calcula la latitud y longitud
 
 Tiene su propiedad "***geolcation***"
 
@@ -201,7 +194,7 @@ Esta función coloca el foco de atención al elemento
         }
 Y si el navegador no lo soporta no se realizará la acción del "***autofocus***"
 
-De igual manera se puede usar Modernizr
+De igual manera se puede usar "*Modernizr*"
 
 ## Micro Data
 Estos sirven para poder añadir algunas pequeñas cosas a la página web como por ejemplo señalar cosas sobre el autor o no tan extensas 
