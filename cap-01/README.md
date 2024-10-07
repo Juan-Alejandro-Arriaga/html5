@@ -3,7 +3,9 @@
 Este capítulo me explico un poco de la historia de HTML y de los pioneros que empezaron con la creación de las páginas web, aprendí que existen los tipos de contenidos y que cada uno se especifica con ciertas etiquetas como por ejemplo las imágenes JPEG, al colocarse en la etiqueta 
 `<img>` se le coloca de preferencia al final "imagen/jpeg" para indicar que es un formato de imagen de tipo Jpeg, además explica que tu al ingresar a una página web esta envía el "header" a tu navegador para que pueda interpretar como se tiene que ver la página web, además que estas fueron introducidas en 1994 por la World Wide Web Consortium (W3C)
 
+
 Además, que las etiquetas fueron idea de diversas personas, se nos explica cómo se creó la etiqueta `<img>`, que fue *Mark Anderssen* 
+
 
 Fue algo tipo
 
