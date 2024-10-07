@@ -16,7 +16,7 @@ Fue algo tipo
 Menciona unos formatos los Xbm y Xpm que so populares entre sistemas de Unix
 
 Dentro del capítulo incluye algunos viejos navegadores como:
-* Mosaic cual fue creado por Marc antes de crear su fundación Mosaic Communications Corporation.
+* Mosaic cual fue la creacion de Marc antes de crear su fundación Mosaic Communications Corporation.
 
 
 
