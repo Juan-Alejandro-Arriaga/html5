@@ -24,7 +24,7 @@ El que introdujo el atributo "name" fue *Tony Johnson*
 
 Nos hablan de SLAC que significa *Stanford Linear Accelerator Center* los cuales fueron los primeros que hostearon el primer servidor web 
 
-Además de el atributo "name" *Tony* introdujo el atributo "HREF" donde al principio se podía referenciar (referenece en inglés, de ahí REF de HREF), de ahí también la incluye en la etiqueta `<A>`
+Además de el atributo "name" *Tony* introdujo el atributo "HREF" donde al principio se podía referenciar (referenece en inglés, de ahí REF de HREF), de ahí también la incluye en la etiqueta `<a>`
    
    
  Y continuando con eso varias personas más fueron añadiendo atributos, como *Jim Davis* que fue el que menciono de especificar el tipo de contenido dejando la etiqueta así:
