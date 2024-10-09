@@ -5,10 +5,10 @@
 Debido al problema que hubo cuando los navegadores se mejoraron causando que las páginas se mostrarán incorrectamente ,siendo así que Microsoft pensó que antes que se mostrara la página se mirara el ***DOCTYPE***  el cual suele ser la primera linea del código 
 
 Esto se esparció rápido y ahora los navegadores tenían 2 modos los cuales eran:
-* **Modo peculiaridades**
-* **Modo estándar**
+* **Quirks mode**
+* **Standards mode**
 
-Aun así presentaban problemas con el modo estándar así que se creo el modo **"casi estándar"**
+Aun así presentaban problemas con el modo estándar así que se creo el modo **"Almost Standards Mode"**
 
     <!DOCTYPE html
           PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -33,11 +33,11 @@ Existen los atributos "***xml:lang***" y "***lang***" realizan a misma función 
 Este elemento contiene meta-datos y suele ser el primer sucesor de la etiqueta raíz ,elemento `<body>` el el cual contiene el cuerpo de la página web.
 
 La etiqueta `<head>` puede contener distintos tipos de etiqueta como:
-* *Meta*
-* *Title*
-* *Head*
+* *meta*
+* *title*
+* *head*
 
-## Character Encoding
+## Codificación de los caracteres
 El texto esta compuesto por *"bits y bytes"* , el ***"Character encoding"*** es en el cual se almacenan cada texto que se imprime en la pantalla.
 
 El navegador lo determina gracias al "***header***" en tipo HTTP, ejemplo:
@@ -53,7 +53,7 @@ En **HTML5** toda esa etiqueta fue reducida para su uso en todos los navegadores
     
     <meta charset="uft-8" />
 
-## Friends & (Link) Relations
+## Amigos y relaciones (*Links*)
 
 La etiqueta `<a>` sirve como un apuntador a otra página 
 
@@ -86,7 +86,7 @@ Se puede usar para describir el tipo de feed usando distintos atributos por ejem
     type=application/atom+xml
     Indica que texto es de tipo Atom
     
-## Other link relations in HTML5
+## Otras relaciones de enlaces en HTML5
 
 `<link rel="author">`
 Es usada para dar información del autor.
@@ -113,7 +113,7 @@ Indica que no se filtrara algún tipo de dato al seguir al enlace
 `<link rel="search">`
 Este sirve para búsquedas dentro de documentos y para ser útil debe apuntar a algún documento de "***OpenSearch***"
 
-## New Semantic Elements in HTML5
+## Nuevos elementos semánticos en HTML5
 
 `<section>` Sirve para clasificar los datos y elementos de una página, ya sean introducciones,títulos, objetos , datos de contacto.
 
@@ -127,7 +127,7 @@ Este sirve para búsquedas dentro de documentos y para ser útil debe apuntar a 
 
 `<footer>` Se coloca al final de la página y se colocan *links* y/o información del autor , sobre la página   
 
-## A long digression into how browsers handle unknown elements
+## Como los navegadores manejan los elementos desconocidos
 Cuando los navegadores encuentran elementos que desconocen suele haber problemas con el "*DOM*" y no respetan la sintaxis que da HTML5 
 
 Como por ejemplo:
@@ -137,20 +137,20 @@ Como por ejemplo:
     article
     |
     +--h1 (child of article)
-    |  |
-    |  +--text node "Welcome to Initech"
+    |      |
+    |      +--text node "Welcome to Initech"
     |
     +--p (child of article, sibling of h1)
-     |
-    +--text node "This is your "
-     |
-     +--span
-     |  |
-     |  +--text node "first day"
-     |
-     +--text node "."
+       |
+       +--text node "This is your "
+       |
+       +--span
+       |  |
+       |  +--text node "first day"
+       |
+       +--text node "."
      
-    Así lo lee el navegador:
+    Así lo crea el navegador cuando detecta algún elemento desconocido:
      
     article (no children)
     h1 (sibling of article)
@@ -165,7 +165,7 @@ Como por ejemplo:
     |  +--text node "first day"
     |
     +--text node "."
-
+    
 Una solución para este problema es creando el elemento con JS  antes de usarlo dentro de la pagina , y así el elemento sera reconocido por el navegador
 
 `<script>document.createElement("article");</script>`
@@ -197,29 +197,28 @@ Este crea nuevas secciones , un nodo en el esquema del documento y cada seccion 
     
 Anteriormente en HTML4 solo se podian crear esquemas de los documentos con etiquetas `<h1>-<h6>`,esto causaba que solo hubiera un nodo raíz ,ahora con este elemento ya es posible crear distintos nodos con distintas raíces
 
-## Navigation
+## Navegación
 La navegación en una pagina web debe ser sencilla ya que pueden existir diversas dificultades con la cuales las personas no puedan interactuar de una manera correcta con la pagina.
 
 Así que se puede usar un complemento del navegador como por ejemplo:
 * Lectores de pantalla
 * Texto a voz
 
-Dentro de HTML5 nos permite marcar las seccions de navegacion con la etiqueta `<nav>`.
+Dentro de HTML5 nos permite marcar las seccions de navegacion con la etiqueta `<nav>`
 
     <nav>
-        <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">gallery</a></li>
-            <li><a href="#">about</a></li>
-        </ul>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">blog</a></li>
+        <li><a href="#">gallery</a></li>
+        <li><a href="#">about</a></li>
+      </ul>
     </nav>
     
-
 ## Footers
 Suele ser la ultima cosa en la página ,suele contener información acerca de la pagina web ,datos generales,existen los "**Fat footers**" el cual se compone por 3 columnas
 
-       <div id="w3c_footer">
+    <div id="w3c_footer">
      <div class="w3c_footer-nav">
        <h3>Navigation</h3>
        <ul>
