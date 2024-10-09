@@ -218,7 +218,7 @@ Dentro de HTML5 nos permite marcar las seccions de navegacion con la etiqueta `<
 ## Footers
 Suele ser la ultima cosa en la página ,suele contener información acerca de la pagina web ,datos generales,existen los "**Fat footers**" el cual se compone por 3 columnas
 
-    <div id="w3c_footer">
+    <footer>
      <div class="w3c_footer-nav">
        <h3>Navigation</h3>
        <ul>
@@ -246,6 +246,6 @@ Suele ser la ultima cosa en la página ,suele contener información acerca de la
        </ul>
      </div>
      <p class="copyright">Copyright © 2009 W3C</p>
-    </div>
+    </footer>
     
 # Fin
