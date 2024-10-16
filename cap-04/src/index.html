@@ -137,15 +137,6 @@
                 </canvas>
                 Canva con textos y fuentes
             </p>
-            <script>
-                function fuentes(){
-                    var can=document.getElementById("font_text");
-                    var cox=can.getContext("2d");
-                    cox.font="bold 50px sans-serif";
-                    cox.fillText("Hola", 50 , 70);
-                    cox.fillText("Mundo" , 50 , 120);
-                }
-            </script>
         </div>
         <div 
              class="gradientes">
@@ -322,6 +313,15 @@
                     can.lineTo(60, 375);
                     can.lineTo(55, 370);
                     can.stroke();
+                }
+        </script>
+        <script>
+                function fuentes(){
+                    var can=document.getElementById("font_text");
+                    var cox=can.getContext("2d");
+                    cox.font="bold 50px sans-serif";
+                    cox.fillText("Hola", 50 , 70);
+                    cox.fillText("Mundo" , 50 , 120);
                 }
         </script>
         
