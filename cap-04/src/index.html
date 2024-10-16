@@ -36,6 +36,9 @@
         .imagenes{
             background-color: burlywood;
         }
+        #img_imge{
+            display: none;
+        }
     </style>
     <body>
 
@@ -85,38 +88,7 @@
             </canvas>
             Canva con clearRect(1 click para aparecer, 2 clicks continuos para limpiar)
         </p>
-            <script>
             
-                function dibujaforma(){
-                    var canva_i= document.getElementById("canva_identificado");
-                    var contexto_c=canva_i.getContext("2d");
-
-                    contexto_c.fillRect(50,25,150,100);
-                }
-                function dibujaforma_2(){
-                    var canva_i= document.getElementById("canva_identificado_2");
-                    var contexto_c=canva_i.getContext("2d");
-                    contexto_c.fillStyle="blue";
-                    contexto_c.fillRect(50,25,150,100);
-                }
-                function dibujaforma_3(){
-                    var canva_i= document.getElementById("canva_identificado_3");
-                    var contexto_c=canva_i.getContext("2d");
-                    contexto_c.strokeStyle="blue";
-                    contexto_c.strokeRect(50,25,150,100);
-                }
-                function dibujaforma_4(){
-                    var canva_i= document.getElementById("canva_identificado_4");
-                    var contexto_c=canva_i.getContext("2d");
-                    contexto_c.fillStyle="blue";
-                    contexto_c.fillRect(50,25,150,100);
-                }
-                function limpiarforma(){
-                    var canva_i= document.getElementById("canva_identificado_4");
-                    var contexto_c=canva_i.getContext("2d");
-                    contexto_c.clearRect(50,25,150,100);
-                }
-            </script>
         </div>    
         <div 
              class="paths">
@@ -151,7 +123,138 @@
             </canvas>
             Ejemplo del libro 
         </p>
+
+        </div>
+        <div 
+             class="textos">
+            <h1>
+                Textos
+            </h1>
+            <p>
+                <canvas 
+                        id="font_text" 
+                        onclick="fuentes()">
+                </canvas>
+                Canva con textos y fuentes
+            </p>
             <script>
+                function fuentes(){
+                    var can=document.getElementById("font_text");
+                    var cox=can.getContext("2d");
+                    cox.font="bold 50px sans-serif";
+                    cox.fillText("Hola", 50 , 70);
+                    cox.fillText("Mundo" , 50 , 120);
+                }
+            </script>
+        </div>
+        <div 
+             class="gradientes">
+            <p>
+                <canvas 
+                        id="gradi" 
+                        onclick="gradie()">
+                </canvas>
+                Degradado Lineal
+            </p>
+
+        </div>
+        <div 
+             class="imagenes">
+            <p>
+                <img 
+                     width="100" 
+                     height="100" 
+                     src="imagenes/ejemplo.jpg" 
+                     id="imge">
+                <canvas 
+                        id="imagen">
+                </canvas>
+                Imagen con elemento "img" 
+            </p>
+            <p>
+                <canvas 
+                        id="img_imge">
+                </canvas>
+                
+            </p>
+            <p>
+                <canvas 
+                        id="img_repetida">
+                </canvas>
+                Imagen repetida
+            </p>
+
+        </div>
+        
+        
+        <script>
+            
+                function dibujaforma(){
+                    var canva_i= document.getElementById("canva_identificado");
+                    var contexto_c=canva_i.getContext("2d");
+
+                    contexto_c.fillRect(50,25,150,100);
+                }
+                function dibujaforma_2(){
+                    var canva_i= document.getElementById("canva_identificado_2");
+                    var contexto_c=canva_i.getContext("2d");
+                    contexto_c.fillStyle="blue";
+                    contexto_c.fillRect(50,25,150,100);
+                }
+                function dibujaforma_3(){
+                    var canva_i= document.getElementById("canva_identificado_3");
+                    var contexto_c=canva_i.getContext("2d");
+                    contexto_c.strokeStyle="blue";
+                    contexto_c.strokeRect(50,25,150,100);
+                }
+                function dibujaforma_4(){
+                    var canva_i= document.getElementById("canva_identificado_4");
+                    var contexto_c=canva_i.getContext("2d");
+                    contexto_c.fillStyle="blue";
+                    contexto_c.fillRect(50,25,150,100);
+                }
+                function limpiarforma(){
+                    var canva_i= document.getElementById("canva_identificado_4");
+                    var contexto_c=canva_i.getContext("2d");
+                    contexto_c.clearRect(50,25,150,100);
+                }
+        </script>
+        <script>
+                    window.onload = function a(){
+                        var can =document.getElementById("imagen");
+                        var con = can.getContext("2d");
+                        var imge = document.getElementById("imge");
+                        con.drawImage(imge , 100 , 25 ,100 , 100);
+                    };  
+                    var canva= document.getElementById("img_imge");
+                    var cox=canva.getContext("2d");
+                    var bwu=new Image();
+                    bwu.src="imagenes/ejemplo.jpg"
+                    bwu.onload= function b(){
+                        cox.drawImage(bwu , 100, 25 ,100 ,100);        
+                        cox.drawImage(bwu , 100, 25 ,100 ,100);        
+                    };
+                    var canv=document.getElementById("img_repetida");
+                    var canco=canv.getContext("2d");
+                    bwu.onload = function c (){
+                        for(var x=0 , y=0; x < 300 && y < 255 ;x += 50 , y += 30 ){
+                            canco.drawImage(bwu,x,y,50,50);
+                        }
+                    }; 
+        </script>
+        <script>
+                function gradie(){
+                    var can = document.getElementById("gradi");
+                    var cox = can.getContext("2d");
+                    
+                    var degradado = cox.createLinearGradient(0,0 ,300,0);
+                    degradado.addColorStop(0,"black");
+                    degradado.addColorStop(1,"white");
+                    cox.fillStyle = degradado;
+                    cox.fillRect(0,0,300,225);
+                }
+        </script>
+        <script>
                 function dibuja_linea1(){
                     var canva= document.getElementById("canva_lineas");
                     var can=canva.getContext("2d");
@@ -220,100 +323,7 @@
                     can.lineTo(55, 370);
                     can.stroke();
                 }
-            </script>
-        </div>
-        <div 
-             class="textos">
-            <h1>
-                Textos
-            </h1>
-            <p>
-                <canvas 
-                        id="font_text" 
-                        onclick="fuentes()">
-                </canvas>
-                Canva con textos y fuentes
-            </p>
-            <script>
-                function fuentes(){
-                    var can=document.getElementById("font_text");
-                    var cox=can.getContext("2d");
-                    cox.font="bold 50px sans-serif";
-                    cox.fillText("Hola", 50 , 70);
-                    cox.fillText("Mundo" , 50 , 120);
-                }
-            </script>
-        </div>
-        <div 
-             class="gradientes">
-            <p>
-                <canvas 
-                        id="gradi" 
-                        onclick="gradie()">
-                </canvas>
-                Degradado Lineal
-            </p>
-            <script>
-                function gradie(){
-                    var can = document.getElementById("gradi");
-                    var cox = can.getContext("2d");
-                    
-                    var degradado = cox.createLinearGradient(0,0 ,300,0);
-                    degradado.addColorStop(0,"black");
-                    degradado.addColorStop(1,"white");
-                    cox.fillStyle = degradado;
-                    cox.fillRect(0,0,300,225);
-                }
-            </script>
-        </div>
-        <div 
-             class="imagenes">
-            <p>
-                <img 
-                     width="100" 
-                     height="100" 
-                     src="imagenes/ejemplo.jpg" 
-                     id="imge">
-                <canvas 
-                        id="imagen">
-                </canvas>
-                Imagen con elemento "img" 
-            </p>
-            <p>
-                <canvas 
-                        id="img_imge">
-                </canvas>
-                Imagen usando objeto "Image();"
-            </p>
-            <p>
-                <canvas 
-                        id="img_repetida">
-                </canvas>
-                Imagen repetida
-            </p>
-                <script>
-                    window.onload = function a(){
-                        var can =document.getElementById("imagen");
-                        var con = can.getContext("2d");
-                        var imge = document.getElementById("imge");
-                        con.drawImage(imge , 100 , 25 ,100 , 100);
-                    };  
-                    var canva= document.getElementById("img_imge");
-                    var cox=canva.getContext("2d");
-                    var bwu=new Image();
-                    bwu.src="imagenes/ejemplo.jpg"
-                    bwu.onload= function b(){
-                        cox.drawImage(bwu , 100, 25 ,100 ,100);        
-                        cox.drawImage(bwu , 100, 25 ,100 ,100);        
-                    };
-                    var canv=document.getElementById("img_repetida");
-                    var canco=canv.getContext("2d");
-                    bwu.onload = function c (){
-                        for(var x=0 , y=0; x < 300 && y < 255 ;x += 50 , y += 30 ){
-                            canco.drawImage(bwu,x,y,50,50);
-                        }
-                    }; 
-                </script>
-        </div>
+        </script>
+        
     </body>
 </html>
