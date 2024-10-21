@@ -147,13 +147,14 @@ Ejemplo de uso con etiqueta `<img>`:
     <img 
         id="cat" 
         src="images/cat.png" 
-        alt="sleeping cat" width="177" height="113"
+        alt="sleeping cat" 
+        width="177" 
+        height="113"
     >
     <canvas 
         id="e" width="177" 
         height="113"
-    >
-    </canvas>
+    />
     <script>
         window.onload = function() {
             var canvas = document.getElementById("e");
@@ -169,8 +170,7 @@ Ejemplo de uso con el objeto `Image()`:
         id="e" 
         width="177" 
         height="113"
-    >
-    </canvas>
+    />
     <script>
         var canvas = document.getElementById("e");
         var context = canvas.getContext("2d");
