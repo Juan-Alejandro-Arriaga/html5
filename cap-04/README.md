@@ -137,27 +137,40 @@ Si la imagen va a ser dibujada con Js se tiene que usar el objeto "**image()**"
 
 Ejemplo de uso con etiqueta `<img>`:
 
-    <img id="cat" src="images/cat.png" alt="sleeping cat" width="177" height="113">
-    <canvas id="e" width="177" height="113"></canvas>
+    <img 
+        id="cat" 
+        src="images/cat.png" 
+        alt="sleeping cat" width="177" height="113"
+    >
+    <canvas 
+        id="e" width="177" 
+        height="113"
+    >
+    </canvas>
     <script>
         window.onload = function() {
-        var canvas = document.getElementById("e");
-        var context = canvas.getContext("2d");
-        var cat = document.getElementById("cat");
-        context.drawImage(cat, 0, 0);
+            var canvas = document.getElementById("e");
+            var context = canvas.getContext("2d");
+            var cat = document.getElementById("cat");
+            context.drawImage(cat, 0, 0);
         };
     </script>    
     
 Ejemplo de uso con el objeto `Image()`:
 
-    <canvas id="e" width="177" height="113"></canvas>
+    <canvas 
+        id="e" 
+        width="177" 
+        height="113"
+    >
+    </canvas>
     <script>
         var canvas = document.getElementById("e");
         var context = canvas.getContext("2d");
         var cat = new Image();
         cat.src = "images/cat.png";
         cat.onload = function() {
-        context.drawImage(cat, 0, 0);
+            context.drawImage(cat, 0, 0);
         };
     </script>
 
@@ -172,16 +185,23 @@ Con la extención Explorercanvas hace que sea posible implementar **canvas API**
     
     <!DOCTYPE html>
     <html>
-    <head>
-      <meta charset="utf-8">
-      <title>Dive Into HTML5</title>
-      <!--[if lt IE 9]>
-        <script src="excanvas.js"></script>
-    <![endif]-->
-    </head>
-    <body>
-      ...
-    </body>
+        <head>
+          <meta 
+            charset="utf-8"
+          >
+          <title>
+            Dive Into HTML5
+          </title>
+          <!--[if lt IE 9]>
+            <script 
+                src="excanvas.js"
+            >
+            </script>
+          <![endif]-->
+        </head>
+        <body>
+             ...
+        </body>
     </html>
 Este código hace que IE 7 y 8 descarguen el script "*excanvas.js*" y lo ejecutaran(*otros navegadores ignoraran el script*) con eso es suficiente para que el navegador soporte los **canva API** su uso será el mismo y su creación la misma con JS o implementación directa al código. 
 

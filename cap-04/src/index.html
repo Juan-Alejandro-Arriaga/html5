@@ -7,179 +7,195 @@
         </title>
     </head>
     <style>
-        *{
+        * {
             padding: 0;
             border: 0;
         }
-        canvas{
+        canvas {
             height: 225px;
             width: 300px;
             border: 1px solid black;
         }
             
-        #canva_1{
+        #canva_1 {
             border: 2px dotted blue;
         }
-        .simple{
+        .simple {
             background: lightgray;
         }
-        .paths{
+        .paths {
             background: whitesmoke;
         }
-        .textos{
+        .textos {
             background-color: azure;
            
         }
-        .gradientes{
+        .gradientes {
             background: linear-gradient(90deg , green , white ,brown, white , red);
         }
-        .imagenes{
+        .imagenes {
             background-color: burlywood;
         }
-        #img_imge{
+        #img_imge {
             display: none;
         }
     </style>
     <body>
 
         <div 
-             class="simple">
-            <h1>
-                Simple Shapes
-            </h1>
-        <p>
-            <canvas 
-                    id="canvas">
-            </canvas>    
-            Canvas con bordes
-        </p>
-        <p>
-            <canvas 
-                    id="canva_1">
-            </canvas>
-            Canvas con atributo id
-        </p>
-        <p>
-            <canvas 
-                    id="canva_identificado"
-                    onclick="dibujaforma()">
-            </canvas>
-            Canva con evento "onclick" y fillRect
-        </p>
-        <p>
-            <canvas 
-                    id="canva_identificado_2" 
-                    onclick="dibujaforma_2()" >
-            </canvas>
-            Canva con fillStyle
-        </p>
-        <p>
-            <canvas 
-                    id="canva_identificado_3" 
-                    onclick="dibujaforma_3()" >
-            </canvas>
-            Canva con strokeStyle y strokeRect
-        </p>
-        <p>
-            <canvas 
-                    id="canva_identificado_4" 
-                    onclick="dibujaforma_4()" 
-                    ondblclick="limpiarforma()">
-            </canvas>
-            Canva con clearRect(1 click para aparecer, 2 clicks continuos para limpiar)
-        </p>
-            
+             class="simple"
+        >
+                <h1>
+                    Simple Shapes
+                </h1>
+            <p>
+                <canvas 
+                        id="canvas"
+                >
+                </canvas>    
+                Canvas con bordes
+            </p>
+            <p>
+                <canvas 
+                        id="canva_1"
+                >
+                </canvas>
+                Canvas con atributo id
+            </p>
+            <p>
+                <canvas 
+                        id="canva_identificado"
+                        onclick="dibujaforma()"
+                >
+                </canvas>
+                Canva con evento "onclick" y fillRect
+            </p>
+            <p>
+                <canvas 
+                        id="canva_identificado_2" 
+                        onclick="dibujaforma_2()" 
+                >
+                </canvas>
+                Canva con fillStyle
+            </p>
+            <p>
+                <canvas 
+                        id="canva_identificado_3" 
+                        onclick="dibujaforma_3()"
+                >
+                </canvas>
+                Canva con strokeStyle y strokeRect
+            </p>
+            <p>
+                <canvas 
+                        id="canva_identificado_4" 
+                        onclick="dibujaforma_4()" 
+                        ondblclick="limpiarforma()"
+                >
+                </canvas>
+                Canva con clearRect(1 click para aparecer, 2 clicks continuos para limpiar)
+            </p>   
         </div>    
         <div 
-             class="paths">
-            <h1>
-                Paths
-            </h1>
-        <p>
-            <canvas 
-                    id="canva_lineas" 
-                    onclick="dibuja_linea1()">
-            </canvas>
-            Canva con dibujo de linea
-        </p>
-        <p>
-            <canvas 
-                    id="canva_l_libre" 
-                    onclick="lineas_libres()">
-            </canvas>   
-            Dibujo de linea sin patron alguno
-        </p>
-        <p>
-            <canvas 
-                    id="canva_path" 
-                    onclick="lineas_colores()">
-            </canvas>    
-            Lineas con diferentes "Paths"
-        </p>
-        <p>
-            <canvas 
-                    id="ejemplo_path" 
-                    onclick="ejemplo()">
-            </canvas>
-            Ejemplo del libro 
-        </p>
-
+             class="paths"
+        >
+                <h1>
+                    Paths
+                </h1>
+            <p>
+                <canvas 
+                        id="canva_lineas" 
+                        onclick="dibuja_linea1()"
+                >
+                </canvas>
+                Canva con dibujo de linea
+            </p>
+            <p>
+                <canvas 
+                        id="canva_l_libre" 
+                        onclick="lineas_libres()"
+                >
+                </canvas>   
+                Dibujo de linea sin patron alguno
+            </p>
+            <p>
+                <canvas 
+                        id="canva_path" 
+                        onclick="lineas_colores()"
+                >
+                </canvas>    
+                Lineas con diferentes "Paths"
+            </p>
+            <p>
+                <canvas 
+                        id="ejemplo_path" 
+                        onclick="ejemplo()"
+                >
+                </canvas>
+                Ejemplo del libro 
+            </p>
         </div>
         <div 
-             class="textos">
+             class="textos"
+        >
             <h1>
                 Textos
             </h1>
             <p>
                 <canvas 
                         id="font_text" 
-                        onclick="fuentes()">
+                        onclick="fuentes()"
+                >
                 </canvas>
                 Canva con textos y fuentes
             </p>
         </div>
         <div 
-             class="gradientes">
+             class="gradientes"
+        >
             <p>
                 <canvas 
                         id="gradi" 
-                        onclick="gradie()">
+                        onclick="gradie()"
+                >
                 </canvas>
                 Degradado Lineal
             </p>
 
         </div>
         <div 
-             class="imagenes">
+             class="imagenes"
+        >
             <p>
                 <img 
                      width="100" 
                      height="100" 
                      src="imagenes/ejemplo.jpg" 
-                     id="imge">
+                     id="imge"
+                >
                 <canvas 
-                        id="imagen">
+                        id="imagen"
+                >
                 </canvas>
                 Imagen con elemento "img" 
             </p>
             <p>
                 <canvas 
-                        id="img_imge">
+                        id="img_imge"
+                >
                 </canvas>
                 
             </p>
             <p>
                 <canvas 
-                        id="img_repetida">
+                        id="img_repetida"
+                >
                 </canvas>
                 Imagen repetida
             </p>
 
         </div>
-        
-        
         <script>
-            
                 function dibujaforma(){
                     var canva_i= document.getElementById("canva_identificado");
                     var contexto_c=canva_i.getContext("2d");
@@ -251,12 +267,12 @@
                     var can=canva.getContext("2d");
                     
                     for (var x = 0.5; x < 500; x += 10) {
-                    can.moveTo(x, 0);
-                    can.lineTo(x, 200);
+                        can.moveTo(x, 0);
+                        can.lineTo(x, 200);
                     }
                     for (var y = 0.5; y < 375; y += 10) {
-                    can.moveTo(0, y);
-                    can.lineTo(300, y);
+                        can.moveTo(0, y);
+                        can.lineTo(300, y);
                     }
                     can.strokeStyle="Red"
                     can.stroke();
