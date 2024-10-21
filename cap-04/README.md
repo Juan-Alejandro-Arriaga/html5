@@ -7,13 +7,20 @@ Los `<canvas>` son un elemento que se usa para diversos casos , los cuales puede
 
 ## Canvas invisibles
 
-La sintaxis base de los "***canvas***"seria algo así:
+La sintaxis base de los "`<canvas>`"seria algo así:
 
-`<canvas height="300" width="255"></canvas>`
+    <canvas 
+        height="300" 
+        width="255"
+    >
+    </canvas>
 
 Sintaxis con atributo "*id*"
 
-`<canvas id="[nombre]"></canvas>`
+    <canvas 
+        id="[nombre]"
+    >
+    </canvas>
 
 
 Con el identificador que le pongamos existe la posibilidad de poder encontrarlas con funciones JS
@@ -39,7 +46,7 @@ Ya que con este una vez que lo llamamos , con el elemento "***getContext***" lo 
 *En la fecha que se lanzo este libro no existía como tal una cadena de 3D*
 
 ##### Draw Context 
-Existe un grupo muy variado de métodos y propiedades las cuales se les pueden agregar a los "***canvas***" ,algunos ejemplos son estos:
+Existe un grupo muy variado de métodos y propiedades las cuales se les pueden agregar a los "`<canvas>`" ,algunos ejemplos son estos:
 * **fillStyle**: Con esta podemos establecer el color con el cual sera llenado el dibujo, viene con negro predeterminado.
 * **fillRect**: Este es el que realiza el dibujo por medio de coordenadas y medidas en pixeles.
 * **strokeStyle**: Realiza la misma función que "*fillStyle*"
@@ -209,11 +216,3 @@ Sin embargo contara con limitaciones como:
 * Los degradados serán solo lineales
 * Es lento
 * Si no se escala uniformemente no saldrá correctamente los trazos
-
-
-
-
-
-
-
-

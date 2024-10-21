@@ -45,94 +45,105 @@
         <div 
              class="simple"
         >
-                <h1>
-                    Simple Shapes
-                </h1>
+            <h1>
+                Simple Shapes
+            </h1>
+            <h3>
+                Canvas con bordes
+            </h3>
             <p>
                 <canvas 
                         id="canvas"
-                >
-                </canvas>    
-                Canvas con bordes
+                />
+                
             </p>
             <p>
                 <canvas 
                         id="canva_1"
-                >
-                </canvas>
-                Canvas con atributo id
+                />
             </p>
+            <h3>
+                Canva con evento "onclick" y fillRect
+            </h3>
             <p>
                 <canvas 
                         id="canva_identificado"
                         onclick="dibujaforma()"
-                >
-                </canvas>
-                Canva con evento "onclick" y fillRect
+                />
             </p>
+            <h3>
+                Canva con fillStyle
+            </h3>
             <p>
                 <canvas 
                         id="canva_identificado_2" 
                         onclick="dibujaforma_2()" 
-                >
-                </canvas>
-                Canva con fillStyle
+                />
             </p>
+            <h3>
+                Canva con strokeStyle y strokeRect    
+            </h3>
             <p>
                 <canvas 
                         id="canva_identificado_3" 
                         onclick="dibujaforma_3()"
-                >
-                </canvas>
-                Canva con strokeStyle y strokeRect
+                />
             </p>
+            <h3>
+                Canva con clearRect(1 click para aparecer, 2 clicks continuos para limpiar)
+            </h3>
             <p>
                 <canvas 
                         id="canva_identificado_4" 
                         onclick="dibujaforma_4()" 
                         ondblclick="limpiarforma()"
-                >
-                </canvas>
-                Canva con clearRect(1 click para aparecer, 2 clicks continuos para limpiar)
+                />
             </p>   
         </div>    
         <div 
              class="paths"
         >
-                <h1>
-                    Paths
-                </h1>
+            <h1>
+                Paths
+            </h1>
+            <h3>
+                Canva con dibujo de linea
+            </h3>
             <p>
                 <canvas 
                         id="canva_lineas" 
                         onclick="dibuja_linea1()"
-                >
-                </canvas>
-                Canva con dibujo de linea
+                />
+                
             </p>
+            <h3>
+                 Dibujo de linea sin patron alguno
+            </h3>
             <p>
                 <canvas 
                         id="canva_l_libre" 
                         onclick="lineas_libres()"
-                >
-                </canvas>   
-                Dibujo de linea sin patron alguno
+                />  
             </p>
+            <h3>
+                Lineas con diferentes "Paths"
+            </h3>
             <p>
                 <canvas 
                         id="canva_path" 
                         onclick="lineas_colores()"
-                >
-                </canvas>    
-                Lineas con diferentes "Paths"
+                />   
+                
             </p>
+            <h3>
+                Ejemplo del libro 
+            </h3>
             <p>
                 <canvas 
                         id="ejemplo_path" 
                         onclick="ejemplo()"
-                >
-                </canvas>
-                Ejemplo del libro 
+                />
+                
             </p>
         </div>
         <div 
@@ -141,31 +152,39 @@
             <h1>
                 Textos
             </h1>
+            <h3>
+                Canva con textos y fuentes
+            </h3>
             <p>
                 <canvas 
                         id="font_text" 
                         onclick="fuentes()"
-                >
-                </canvas>
-                Canva con textos y fuentes
+                />
             </p>
         </div>
         <div 
              class="gradientes"
         >
+            <h1>
+                Degradados
+            </h1>
             <p>
                 <canvas 
                         id="gradi" 
                         onclick="gradie()"
-                >
-                </canvas>
-                Degradado Lineal
+                />
             </p>
 
         </div>
         <div 
              class="imagenes"
         >
+            <h1>
+                Imagenes
+            </h1>
+            <h3>
+                Imagen con elemento "img"
+            </h3>
             <p>
                 <img 
                      width="100" 
@@ -175,23 +194,19 @@
                 >
                 <canvas 
                         id="imagen"
-                >
-                </canvas>
-                Imagen con elemento "img" 
+                />
+                 
             </p>
+            <h3>Imagen repetida</h3>
             <p>
                 <canvas 
                         id="img_imge"
-                >
-                </canvas>
-                
+                />    
             </p>
             <p>
                 <canvas 
                         id="img_repetida"
-                >
-                </canvas>
-                Imagen repetida
+                />
             </p>
 
         </div>
@@ -225,43 +240,38 @@
                     var contexto_c=canva_i.getContext("2d");
                     contexto_c.clearRect(50,25,150,100);
                 }
-        </script>
-        <script>
-                    window.onload = function a(){
-                        var can =document.getElementById("imagen");
-                        var con = can.getContext("2d");
-                        var imge = document.getElementById("imge");
-                        con.drawImage(imge , 100 , 25 ,100 , 100);
+            
+                window.onload = function a(){
+                        var can1 =document.getElementById("imagen");
+                        var can2 = can1.getContext("2d");
+                        var canimg = document.getElementById("imge");
+                        can2.drawImage(imge , 100 , 25 ,100 , 100);
                     };  
-                    var canva= document.getElementById("img_imge");
-                    var cox=canva.getContext("2d");
+                    var conva= document.getElementById("img_imge");
+                    var conva1=conva.getContext("2d");
                     var bwu=new Image();
                     bwu.src="imagenes/ejemplo.jpg"
                     bwu.onload= function b(){
                         cox.drawImage(bwu , 100, 25 ,100 ,100);        
                         cox.drawImage(bwu , 100, 25 ,100 ,100);        
                     };
-                    var canv=document.getElementById("img_repetida");
-                    var canco=canv.getContext("2d");
+                    var cumba=document.getElementById("img_repetida");
+                    var cumba1=cumba.getContext("2d");
                     bwu.onload = function c (){
                         for(var x=0 , y=0; x < 300 && y < 255 ;x += 50 , y += 30 ){
-                            canco.drawImage(bwu,x,y,50,50);
+                            cumba1.drawImage(bwu,x,y,50,50);
                         }
                     }; 
-        </script>
-        <script>
+            
                 function gradie(){
                     var can = document.getElementById("gradi");
                     var cox = can.getContext("2d");
-                    
                     var degradado = cox.createLinearGradient(0,0 ,300,0);
                     degradado.addColorStop(0,"black");
                     degradado.addColorStop(1,"white");
                     cox.fillStyle = degradado;
                     cox.fillRect(0,0,300,225);
                 }
-        </script>
-        <script>
                 function dibuja_linea1(){
                     var canva= document.getElementById("canva_lineas");
                     var can=canva.getContext("2d");
@@ -330,8 +340,6 @@
                     can.lineTo(55, 370);
                     can.stroke();
                 }
-        </script>
-        <script>
                 function fuentes(){
                     var can=document.getElementById("font_text");
                     var cox=can.getContext("2d");
@@ -340,6 +348,5 @@
                     cox.fillText("Mundo" , 50 , 120);
                 }
         </script>
-        
     </body>
 </html>
