@@ -2,7 +2,7 @@
 
 ## Contenedores de video
 
-Los archivos de vid0oeo como *"AVI"* o *"MP4"* son formatos de contenedores que definen como almace-nar cosas dentro de ellos.
+Los archivos de video como *"AVI"* o *"MP4"* son formatos de contenedores que definen como almace-nar cosas dentro de ellos.
 
 Suelen tener varias pistas  y estas son:
 * **"Audio"**:No contiene video
