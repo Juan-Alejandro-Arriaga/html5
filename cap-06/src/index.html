@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta
+            charset="utf-8"
+        >
+        <title>
+            Geolocalización
+        </title>
+    </head>
+    <style>
+        .boton {
+
+            width: 200px;
+            height: 100px;
+            background: black;
+            font-size: 30px;
+            color: white;
+            
+        }
+        .boton:hover{
+            color: black;
+            background: white;
+        }
+        .ubicacion{
+            border: 1px solid black;
+            height: 200px;
+            width: 500px;
+        }
+    </style>
+    <body>
+       
+        <button 
+                class="boton" 
+                onclick="get_location()"
+        >
+            Doxxeame
+        </button>
+        <p 
+            class="ubicacion"
+            id="ubi"
+        />
+        <script>
+            const opciones = {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximunAge: 5000,
+            }
+            
+            function get_location(){
+                navigator.geolocation.getCurrentPosition(show_map,handle_error,opciones);
+            }
+            
+            function show_map(position){
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                var si =document.getElementById('ubi');
+                si.innerText ="Latitud: "+ latitude + "    Longitud" + longitude;
+            }
+            
+            function handle_error (err){
+                
+                switch(err.code){
+                    case err.PERMISSION_DENIED:
+                        alert("El usuario no permitio");
+                    break;
+                    case err.POSITION_UNAVAILABLE:
+                        alert("La ubi no esta disponible");
+                    break;
+                    case err.TIMEOUT:
+                        alert("Demasiado tiempo para obtener la ubicación");
+                    break;
+                    case err.UNKNOWN_ERROR:
+                        alert("Error inesperado");
+                    break;
+                }
+                
+            }
+            
+        </script> 
+    </body>
+</html>
