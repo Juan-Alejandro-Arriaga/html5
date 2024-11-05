@@ -61,13 +61,13 @@ Hace que puedas compartir tu ubicación , lo que es la latitud y longitud se pon
 
 ## Enséñame el código
 El "*API*" tiene su propiedad `navigator` y su objeto `.geolocation` , un ejemplo con eso seria:
-
+```js
     function get_location(){
         navigator.geolocation.getCurrentPosition(show_map);
     }
-   
+```
 Este código no contiene alguna detección de errores,sin embargo se puede usar "*Modernizr*" para hacer ese trabajo.
-
+```js
     function get_location{
         if(Modernizr.geolocation){
             navigator.geolocation.getCurrentPosition(show_map);
@@ -75,16 +75,16 @@ Este código no contiene alguna detección de errores,sin embargo se puede usar 
             //no native support; maybe try Gears?
         }
     }
-
+```
 La geolocalización es opcional y los navegadores no tomaran tu ubicación física sin tu consentimiento.
 
 Lo que hace la siguiente función es para garantizar la obtención de la latitud y longitud mediante una llamada de devolución.
-   
+```js
     function show_map(position){
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
     }
-    
+```   
 El atributo "***coords***" tiene como propiedad la latitud y longitud el cual es la ubicación exacta del usuario.
 
 ##### Tabla de propiedades con valores (rescatada del libro de HTML5)
@@ -204,9 +204,9 @@ Las únicas propiedades que garantizan una devolución de datos son:
 ## Manejo de errores
 
 En el caso de que el usuario no permita acceder a la ubicación suele haber errores ,para resolver eso se crea una función donde se tome decisión de lo que hacer en esos casos
-
+```js
     navigator.geolocation.getCurrentPosition(show_map, handle_error);
-    
+```   
 La función se llamara con algún objeto de PositionError.
 
 ##### Tabla de PositionError Object (Rescatada del libro de HTML5)
@@ -258,13 +258,13 @@ La propiedad "*code*" dará alguno de los siguientes resultados:
 * **TIMEOUT**:Cuando tarda demasiado en calcular la posición del usuario
 
 ##### FUNCIÓN
-
+```js
     function handle_error(err){
         if(err.code==1){
             //user said NO!
         }
     }
-    
+```   
 ## Opciones, quiero opciones
 
 Para localizar dispositivos móviles tienen 2 métodos para poder ser localizados:
@@ -278,9 +278,9 @@ Aun así todo depende de la aplicación que se use ya que hay algunas que no req
 La función `getCurrentPosition()` también tiene un objeto llamado "*Position Options*" el cual se puede configurar, aunque son opcionales.
 
 ##### Ejemplo de implementación:
-
+```js
     navigator.geolocation.getCurrentPosition(show_map, handle_error,options);
-    
+```    
     
 ##### Tabla de PositionOptions Object (Rescatada del libro de HTML5)
 
@@ -371,13 +371,13 @@ Cada propiedad tiene su función y de cada una es:
 * **maximunAge**: Esta hace que si el dispositivo tiene alguna posición almacenada en caché dependiendo la cantidad de tiempo que sea especificada como valor, si se encuentra dentro de ese rango, esa ubicación sera enviada por el mismo dispositivo.
 
 ##### Implementado quedaría así
-
+```js
     const options = {
         enableHighAccuracy: true , 
         timeout: 5000 ,
         maximunAge: 500 ,
     };
-  
+```  
 En caso de se ocupe continuamente la ubicación del usuario es mas viable ocupar `watchPosition()`
 
 #### watchPosition() 
@@ -405,12 +405,10 @@ Para utilizarla se agregan 2 elementos `<script>` dentro del código:
                 </title>
             </head>
             <body>
-                <script 
-                    src="gears_init.js"
-                />
-                <script 
-                    src="geo.js"
-                />
+                <script src="gears_init.js">
+                </script>
+                <script src="geo.js">
+                </script>
             </body>
         </html>
 ```
