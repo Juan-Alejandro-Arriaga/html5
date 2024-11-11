@@ -71,10 +71,10 @@ Versiones de navegadores que soportan "*HTML5 Storage*"
     </tbody>
 </table>
 
-Con JS accederás al "*HTML5 Storage*" con el objeto de "*localStrogare*" aun así se debe detectar si el navegador lo soporta.
+Con JS accederás al "*HTML5 Storage*" con el objeto de "*localStorage*" aun así se debe detectar si el navegador lo soporta.
 
 ##### Ejemplo:
-```js
+```javascript
     function support_html5_storage(){
         try{
             return 'localStorage' in window && window['localStorage'] !== null;
@@ -89,7 +89,7 @@ Con JS accederás al "*HTML5 Storage*" con el objeto de "*localStrogare*" aun as
 Se basa en pares de claves y valores con algún nombre ,los datos pueden ser de cualquier tipo siempre y cuando sean compatibles con JS ,sin embargo los datos almacenados son de tipo "*String*" ,en ese caso será necesario usar funciones para convertirlos a tipo "*String*" como por ejemplo `parseInt()` en caso de datos tipo `Int`
 
 ##### Ejemplo de código 
-```JS
+```javascript
     interface Storage {
         getter any getItem(in DOMString key);
         setter creator void setItem(in DOMString key, in any data);
@@ -103,16 +103,16 @@ Se puede usar un "*array*" en vez de utilizar los 2 métodos anteriores.
 
 ##### Por ejemplo
 
-```JS
+```javascript
     var foo = localStorage.getItem("bar");
     // ...
-    localStorage.setItem("Bar", foo);
+    localStorage.setItem("bar", foo);
 ```
 
 A su vez existen métodos para eliminar todos los valores y claves a la vez.
 
 ##### Ejemplo
-```JS
+```javascript
     interface Storage {
         deleter void removeItem(in DOMString key);
         void clear;
@@ -125,7 +125,7 @@ De igual manera existe una propiedad para para poder obtener el numero total de 
 
 ##### Ejemplo
 
-```JS
+```javascript
     interface Storage {
         readonly attribute unsigned long lenght;
         getter DOMString key(in unsigned long index);
@@ -138,7 +138,7 @@ Cada que se realiza un cambio queda un historial de cada cambio realizado.
 
 Para enganchar el evento del almacenamiento se debe verificar que mecanismo admite el navegador , aquí un ejemplo de como hacerlo:
 
-```JS
+```javascript
     if(window.addEventListener){
         window.addEventListener("storage", handle_storage,false);
     }else{
@@ -148,7 +148,7 @@ Para enganchar el evento del almacenamiento se debe verificar que mecanismo admi
 
 La función de devolución *"handle_strogare"* va a almacenar el objeto se almacena en `window.event`
 
-```JS
+```javascript
     function handle_storage(e) {
         if (!e) { e = window.event; }
     }
@@ -240,7 +240,7 @@ Usando el ejemplo realizado por mi para este resumen del capitulo:
 
 ##### Cada vez que se realiza un cambio se llama a esta función
     
-```JS
+```javascript
    function cargarcolor(){
                 const carga = localStorage.getItem("Colorcito");
                 if(carga){
@@ -261,11 +261,11 @@ Existe de igual manera la posibilidad de preguntarle al usuario si es que quiere
 ##### Se agrega el botón:
 ```HTML
     <button 
-                onclick="cargarcolor()"
-                class="btn"
-        >
-            Cargar ultimo color
-        </button>
+        onclick="cargarcolor()"
+        class="btn"
+    >
+        Cargar ultimo color
+    </button>
 ```
 Aquí solo se agrega el botón y se añade el evento del "*onclick*" dentro del mismo, en el cual se llama a la función al momento que el usuario da "*click*"
 
