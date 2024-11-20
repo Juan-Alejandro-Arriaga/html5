@@ -62,8 +62,14 @@ Ejemplo de su implementación:
 
 ```html
     <form>
-        <input name="q" placeholder="Search Bookmarks and History">
-        <input type="submit" value="Search">
+        <input 
+            name="q" 
+            placeholder="Search Bookmarks and History"
+        >
+        <input 
+            type="submit" 
+            value="Search"
+        >
     </form>
 ```
 ## Campos de autoenfoque (AUTOFOCUS FIELDS)
@@ -129,8 +135,14 @@ Aun así el siguiente código explica como configurar un campo de algún formula
 
 ```html
     <form>
-        <input name="q" autofocus>
-        <input type="submit" value="Search">
+        <input 
+            autofocus 
+            name="q"
+        >
+        <input 
+            type="submit" 
+            value="Search"
+        >
     </form>
 ```
 En caso de que el navegador no admita el atributo `autofocus` solamente lo ignoraran y no habrá ningún otro cambio,en cambio existe la posibilidad de que el `autofocus` funcione en todos los navegadores ,con ayuda de un `<script>` :
@@ -195,7 +207,10 @@ Como tercera opción se puede definir un evento propio tal como `autofocus_ready
         <form name="f">
           <input id="q" autofocus>
           <script>$(document).trigger('autofocus_ready');</script>
-          <input type="submit" value="Go">
+          <input 
+            type="submit" 
+            value="Go"
+          >
         </form>
     </body>
 ```
