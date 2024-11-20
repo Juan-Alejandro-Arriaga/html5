@@ -152,7 +152,7 @@ Para evitar esto existe la solución de establecer el enfoque durante algún eve
 ##### Ejemplo:
 ```html
     <head>
-        <script src=jquery.min.js></script>
+        <script src="jquery.min.js"></script>
         <script>
           $(document).ready(function() {
             if (!("autofocus" in document.createElement("input"))) {
@@ -163,8 +163,14 @@ Para evitar esto existe la solución de establecer el enfoque durante algún eve
     </head>
     <body>
         <form name="f">
-          <input id="q" autofocus>
-          <input type="submit" value="Go">
+            <input 
+                id="q" 
+                autofocus
+            >
+            <input 
+                type="submit" 
+                value="Go"
+            >
         </form>
     </body>
 ```
@@ -313,7 +319,10 @@ El primero que se menciona es el de correo ,que se ve así:
 ```html
     <form>
         <input type="email">
-        <input type="submit" value="go">
+        <input 
+            type="submit" 
+            value="go"
+        >
     </form>
 ```
 Los navegadores que no llegarán a conocer ese tipo de entrada lo pasaran como un tipo "*text*" , ademas no existe una interfaz en particular para ese tipo de entrada , así que es complicado darse cuenta.
@@ -334,10 +343,10 @@ Este te ayuda cuando ocupas algún dato numérico en especifico , el cual debe s
 
 ```html
     <input 
-        type="number"
-        min="0"
         max="10"
+        min="0"
         step="2"
+        type="number"
         value="6"
     >
 ```
@@ -363,10 +372,10 @@ Tiene eventos JS como:
 Estos son otra manera para representar valores de tipo numérico y su sintaxis es esta: 
 ```html
     <input 
-        type="range"
-        min="0"
         max="10"
+        min="0"
         step="2"
+        type="range"
         value="6"
     >
 ```
@@ -479,8 +488,8 @@ Sintaxis:
         type="search"
     >
         <input 
-        value="find" 
         type="submit"
+        value="find" 
     >
     </form>
 ```
@@ -562,8 +571,8 @@ Para desactivar la validación se usa `novalidate`:
 ```html
     <form novalidate>
         <input 
-            type="email" 
             id="addr"
+            type="email" 
         >
         <input 
             type="submit" 
@@ -578,7 +587,7 @@ Son los campos donde se especifica que se necesita llenado para poder enviar el 
 SINTAXIS:
 ```html
     <input 
-        type="text" 
         required
+        type="text" 
     >
 ```

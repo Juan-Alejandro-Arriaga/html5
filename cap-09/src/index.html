@@ -11,52 +11,53 @@
         <h3>Formulario 1</h3>
         <form class="form_1">
             <input 
-                   type="text" 
-                   id="auto"
-                   placeholder="Que estas pensando hoy?" 
                    autofocus
+                   id="auto"
+                   placeholder="Que estas pensando hoy?"
+                   type="text"
             >
             <br>
             <input 
-                   type="number"
-                   min="0"
-                   step="10"
-                   max="100"
-                   value="0"
                    id="inputs"
+                   min="0"
+                   max="100"
+                   type="number"
+                   step="10"
+                   value="0"
+                   
             >
             <br>
             <input 
+                   onclick="getNumber()"
                    type="button" 
                    value="Obtener numero"
-                   onclick="getNumber()"
             > 
             <br>
             <input 
+                   onclick="getAument()"
                    type="button"
                    value="Aumento spinbox"
-                   onclick="getAument()"
             >
             <br>
             <input
+                   onclick="getDecrement()"
                    type="button"
                    value="Decremento Spinbox"
-                   onclick="getDecrement()"
             >
             <br>
             <input 
-                   type="range" 
-                   onclick=""
                    id="slider"
-                   value="0"
-                   step="10"
+                   onclick=""
                    min="0"
                    max="100"
+                   step="10"
+                   type="range" 
+                   value="0"
             >
             <br>
             <input type="date">
             <br>
-            <input type="search" placeholder="buscador">
+            <input placeholder="buscador" type="search" >
             <br>
             <input type="color">
         </form>
