@@ -205,12 +205,15 @@ Como tercera opción se puede definir un evento propio tal como `autofocus_ready
     </head>
     <body>
         <form name="f">
-          <input id="q" autofocus>
-          <script>$(document).trigger('autofocus_ready');</script>
-          <input 
-            type="submit" 
-            value="Go"
-          >
+            <input 
+                autofocus
+                id="q" 
+            >
+            <script>$(document).trigger('autofocus_ready');</script>
+            <input 
+                type="submit" 
+                value="Go"
+            >
         </form>
     </body>
 ```
