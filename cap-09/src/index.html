@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>
+            La forma de la locura
+        </title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h3>Formulario 1</h3>
+        <form class="form_1">
+            <input 
+                   autofocus
+                   id="auto"
+                   placeholder="Que estas pensando hoy?"
+                   type="text"
+            >
+            <br>
+            <input 
+                   id="inputs"
+                   min="0"
+                   max="100"
+                   type="number"
+                   step="10"
+                   value="0"
+                   
+            >
+            <br>
+            <input 
+                   onclick="getNumber()"
+                   type="button" 
+                   value="Obtener numero"
+            > 
+            <br>
+            <input 
+                   onclick="getAument()"
+                   type="button"
+                   value="Aumento spinbox"
+            >
+            <br>
+            <input
+                   onclick="getDecrement()"
+                   type="button"
+                   value="Decremento Spinbox"
+            >
+            <br>
+            <input 
+                   id="slider"
+                   onclick=""
+                   min="0"
+                   max="100"
+                   step="10"
+                   type="range" 
+                   value="0"
+            >
+            <br>
+            <input type="date">
+            <br>
+            <input placeholder="buscador" type="search" >
+            <br>
+            <input type="color">
+        </form>
+        <script>
+            var spin = document.getElementById("inputs");
+            var sli = document.getElementById("slider");
+            
+            function getAument() {
+                spin.stepUp(1);  
+            }
+            function getDecrement() {
+                spin.stepDown(1);   
+            }
+            function getNumber(){
+                var num = spin.value;
+                var number = parseFloat(num);
+                var num1 = sli.value;
+                alert("Spinner: "+number+"  Slider: "+num1);
+            }        
+            if(!"autofocus" in document.createElement("input")) {
+                document.getElementById("auto").focus();
+            };
+        </script>
+    </body>
+    
+</html>
