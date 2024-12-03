@@ -342,7 +342,7 @@ Igualmente con ese mismo link existen los microdatos para "Direcciones" y este d
             itemprop="region">
                 PA
         </span>
-        <span                                                  itemprop="postal-code">
+        <span itemprop="postal-code">
                 19999
         </span>
         <span
