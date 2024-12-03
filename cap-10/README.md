@@ -317,7 +317,7 @@ si se tiene un "*itemtype*" distinto se puede dar estilos completamente diferent
 Igualmente con ese mismo link existen los microdatos para "Direcciones" y este define 5 propiedades:
 1.  **street-address**:Dirección de calle
 1.  **locality**:Localidad
-1.  **region**:Reguon
+1.  **region**:Region
 1.  **postal-code**:Código Postal
 1.  **country-name**:País
 
@@ -336,18 +336,18 @@ Igualmente con ese mismo link existen los microdatos para "Direcciones" y este d
         <br>
         <span 
             itemprop="locality">
-            Anytown
+                Anytown
         </span>,
         <span 
             itemprop="region">
-            PA
+                PA
         </span>
-        <span                                   itemprop="postal-code">
-            19999
+        <span                                                  itemprop="postal-code">
+                19999
         </span>
         <span
             itemprop="country-name">
-            USA
+                USA
         </span>
     </dd>
 ```
@@ -385,8 +385,7 @@ Su manera de uso esta a decisión de Google , ya que el es quien decide que valo
 ##### Imagen de ejemplo del libro
 <img 
     src="src/imagenes/imagen_ejemplo.png" 
-    width="100%"
-    >
+    width="100%">
   
 ## Marcando Organizaciones
 
