@@ -9,7 +9,7 @@ Al momento de cambiar la *URL*, incluyendo el cambio por "*script*" se realiza u
 Para evitar eso la "*Api de historial*" hace que no se active una actualización completa de la pagina ,en cambio solo se descargue la mitad o lo necesario.
 
 ##### Situación
-Tengo 2 paginas y se requiere nacegar en paginas "A" y
+Tengo 2 paginas y se requiere navegar en paginas "A" y
 "B" dentro iniciando su navegación en "A"
 quiere ir a la pagina "B" , pero en lugar de 
 actualizar la pagina completa , realiza los siguientes pasos:
@@ -80,25 +80,25 @@ En base al ejemplo del libro de <a href="https://diveinto.html5doctor.com/exampl
     <aside id="gallery">
       <p class="photonav">
         <a 
-            id="photonext" 
             href="casey.html"
+            id="photonext" 
         >
             Next >
         </a>
         <a 
-            id="photoprev" 
             href="adagio.html"
+            id="photoprev" 
         >
             < Previous
         </a>
       </p>
       <figure id="photo">
         <img 
+            alt="Fer" 
+            height="375"
             id="photoimg" 
             src="gallery/1972-fer-500.jpg"
-            alt="Fer" 
             width="500" 
-            height="375"
         >
         <figcaption>
             Fer, 1972
