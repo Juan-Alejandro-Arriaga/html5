@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Imagenes cambiantes
+        </title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                text-align: center;
+            }
+            img {
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                height: auto;
+                max-width: 100%;
+                margin: 20px 0;
+            }
+            button {
+                background-color: #ffcc00;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                padding: 10px 20px;
+                margin: 5px;
+            }
+            button:hover {
+                background-color: #ffcc90;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Fotos random
+        </h1>
+
+        <img 
+             id="imagen" 
+             src="imagenes/tsurito.jpg" 
+        >
+        <div>
+            <button onclick="imagenSiguiente()">
+                ← Anterior
+            </button>
+            <button onclick="imagenAnterior()">
+                Siguiente →
+            </button>
+        </div>
+        <script>
+            let imagenes = [
+            { src: "imagenes/bwu.jpg", titulo: "Imagen 1" },
+            { src: "imagenes/tsurito.jpg", titulo: "Imagen 2" }
+            ];
+            let numerodeimagen = 0;
+
+            function actualizarImagen() {
+                const imagen = document.getElementById("imagen");
+                imagen.src = imagenes[numerodeimagen].src;
+                history.pushState(numerodeimagen, null, `?img=${numerodeimagen + 1}`);
+            }
+            
+            function imagenSiguiente() {
+                numerodeimagen = (numerodeimagen + 1) % imagenes.length;
+                actualizarImagen();
+            }
+            
+            function imagenAnterior() {
+                numerodeimagen = (numerodeimagen - 1 + imagenes.length) % imagenes.length;
+                actualizarImagen();
+            }
+        
+        </script>
+    </body>
+</html>
